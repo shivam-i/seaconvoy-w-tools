@@ -1,0 +1,54 @@
+.heading-mobile {
+    display: none;
+}
+
+.about-us-container {
+    display: flex;
+}
+
+.about-us-content {
+    width: 40%;
+    margin: 100px 100px;
+}
+.about-us-content h3{
+    font-size: 26px;
+    width: 70%;
+}
+
+.learn-more-container {
+    margin:  35px 0;
+
+}
+
+.learn-more-btn {
+    padding: 15px;
+    background: #005669;
+    color: white;
+}
+
+@media only screen and (max-width: 767px) {
+    .about-us-container {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        border-bottom: #005669 solid 2px;
+    }
+    .heading-pc{
+        display: none;
+    }
+    .heading-mobile {
+        display: block;
+        width: 100%;
+    }
+
+    .about-us-content {
+        width: 100%;
+        margin: 0;
+    }
+
+    .about-us-content h3{
+        font-size: 20px;
+        width: 100%;
+    }
+
+}

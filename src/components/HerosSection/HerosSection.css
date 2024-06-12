@@ -1,0 +1,66 @@
+.heros-section-bg-pic-mobile, .heros-section-title-mobile {
+    display: none;
+}
+
+.heros-section {
+    height: 100vh;
+    /* max-width: 100vw; */
+}
+
+.heros-section-bg-container {
+    z-index: -10;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+.heros-section-bg-pic{
+    height: 100vh;
+    width: 100% ;
+}
+
+.heros-section-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    width: 60%;
+}
+
+.scroll-down {
+    position: absolute;
+    width: 90px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    margin: 40px auto;
+}
+
+@media only screen and (max-width: 767px) {
+    .heros-section-bg-pic, .heros-section-title {
+        display: none;
+    }
+    .heros-section-bg-pic-mobile, .heros-section-title-mobile {
+        display: block;
+    }
+    .heros-section{
+        height: 60vh;
+    }
+    .heros-section-title-mobile {
+        margin: 100px auto;
+        width: 85%;
+    }
+
+    .heros-section-bg-container {
+        height: 60vh;
+        overflow: hidden;
+    }
+
+    .scroll-down {
+        display: none;
+    }
+}

@@ -1,0 +1,22 @@
+.improv-container {
+    display: grid;
+    margin: 50px auto;
+    grid-template-rows: repeat(1, auto);
+    grid-template-columns: repeat(3, auto);
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+} .improv-container img {
+    width: 400px;
+}
+
+@media only screen and (max-width: 767px) {
+    .improv-container {
+      width: 90%;
+      margin: 20px auto;
+      grid-template-columns: repeat(1, auto);
+      grid-template-rows: repeat(3, auto);
+    } .improv-container img {
+      width: 100%;
+  }
+  }

@@ -1,0 +1,68 @@
+.seaconvoy-desc {
+  height: 100vh;
+  display: flex;
+  /* Makes direct children (.seaconvoy-desc-content) flex items */
+}
+
+.seaconvoy-desc-content {
+  display: flex;
+  width: 100%;
+}
+
+.seaconvoy-desc-container,
+.seaconvoy-desc-bg-pic {
+  flex: 1;
+}
+
+.seaconvoy-desc-bg-pic {
+  z-index: -10;
+  height: 100vh;
+  /* object-fit: cover; */
+}
+
+.seaconvoy-desc-heading {
+  margin: 30px 0px 10px 0px;
+}
+
+.seaconvoy-desc-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 60px 120px;
+}
+
+.seaconvoy-desc-container p span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 767px) {
+  .seaconvoy-desc {
+    margin: 10% auto;
+    height: 80vh;
+    width: 90%;
+    border-bottom: #005669 solid 2px;
+    /* Makes direct children (.seaconvoy-desc-content) flex items */
+  }
+  .seaconvoy-desc-bg-pic {
+    display: none;
+  }
+  
+  .seaconvoy-desc-container {
+    margin: 0px 0px;
+    width: 100%
+  }
+  
+  .seaconvoy-desc-container p span {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .seaconvoy-desc-heading{
+    width: 95%;
+    margin: 0% 0px 10px 0px;
+  }
+  
+  .seaconvoy-desc-container p {
+    font-size: 15px;
+  }
+}

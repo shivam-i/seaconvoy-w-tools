@@ -1,0 +1,198 @@
+.footer {
+  background-color: #FFFFFF;
+  color: #000000;
+  /* padding: 20px 0; */
+  font-family: 'Arial', sans-serif;
+  width: 100%;
+  /* border-top: #000 solid 2px; */
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: top; */
+  padding: 0 5%;
+  margin: 30px 0;
+}
+
+.heading-and-partner {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.partner-logo {
+  width: 200px;
+}
+
+.nav-and-social {
+  margin-right: 30px;
+}
+
+.contact {
+  width: 50%;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav p {
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.contact {
+  width: 30%;
+}
+
+.contact-heading {
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.email-heading {
+  font-weight: 500;
+}
+
+.phone-heading {
+  font-weight: 500;
+}
+
+.office-address {
+  font-weight: 500;
+  margin-bottom: -15px;
+}
+
+.follow-us-heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid #CCCCCC;
+}
+
+
+.footer-copy {
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.socials {
+  gap: 20px;
+}
+
+.socials a img {
+  width: 30%;
+}
+
+.footer-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer {
+    display: none;
+  }
+
+  .footer-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .footer-mobile {
+    display: block;
+    border-top: #000000 solid 2px;
+  }
+
+  .heading {
+    font-size: 21px;
+    font-weight: 600;
+  }
+
+  .contact {
+    width: 85%;
+  }
+
+  .contact-heading {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: underline;
+    margin: 20px 0 10px 0;
+  }
+
+  .email-heading {
+    font-weight: 500;
+  }
+
+  .phone-heading {
+    font-weight: 500;
+  }
+
+  .office-address {
+    font-weight: 500;
+    margin: 0 0 -12px 0;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .footer-nav p {
+    font-size: 20px;
+    margin: 20px 0 5px 0;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .footer-nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+  }
+
+  .footer-social {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-social p {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 0 10px 0;
+    text-decoration: underline;
+  }
+
+  .socials {
+    gap: 30px;
+  }
+
+  .socials a img {
+    width: 10%;
+  }
+
+  .footer-copy {
+    margin: 10px 0;
+  }
+}

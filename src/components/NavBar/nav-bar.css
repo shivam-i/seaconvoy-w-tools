@@ -1,0 +1,82 @@
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    position: relative; /* Added for absolute positioning context */
+    z-index: 2; /* Ensure navbar is above other elements */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none; /* Remove bullet points */
+    align-items: center;
+    margin-right: 30px;
+} 
+.nav-links li {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 25px;
+} 
+.nav-links li a {
+    color: white;
+    text-decoration: none; /* Optional: Remove underline from links */
+}   
+
+.nav-bar-logo {
+    margin-left: 40px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    margin-right: 25px; /* Align to the right */
+}
+
+.login-btn, .logout-btn button {
+    border: none;
+    background-color: #00326c;
+    padding: 10px ;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 25px;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+
+    .nav-bar-logo {
+        width: 170px;
+        margin-left: 25px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-end; /* Align items to the right */
+        width: 20%;
+        position: absolute;
+        top: 100%; /* Position below the nav-bar */
+        right: 0;
+        z-index: 3; /* Ensure list is above other elements */
+        background-color: black;
+    }
+
+    .nav-links.visible {
+        display: flex;
+    }
+}
