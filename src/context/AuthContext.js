@@ -1,9 +1,11 @@
 import { createContext, useContext, useEffect, useState } from "react";
+// import firebase from 'firebase/compat/app';
+import 'firebase/database';
 import { 
     signInWithEmailAndPassword, 
     signOut, 
     onAuthStateChanged
-} from 'firebase/auth'
+} from 'firebase/auth';
 import { auth } from "../firebase";
 
 const UserContext = createContext();
@@ -40,3 +42,5 @@ export const AuthContextProvider = ({children}) => {
 export const UserAuth = () => {
     return useContext(UserContext)
 }
+
+// export const database = firebase.database();

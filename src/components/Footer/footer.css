@@ -102,6 +102,7 @@
 
 .socials a img {
   width: 30%;
+  /* filter: invert(); */
 }
 
 .footer-mobile {

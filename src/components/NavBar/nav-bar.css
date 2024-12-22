@@ -46,6 +46,10 @@
     font-weight: 500;
 }
 
+.login-btn:hover, .logout-btn button:hover {
+    background-color: #0078ff;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .nav-bar {

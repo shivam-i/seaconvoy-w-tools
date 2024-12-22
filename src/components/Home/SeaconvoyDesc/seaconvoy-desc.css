@@ -41,6 +41,7 @@
     margin: 10% auto;
     height: 80vh;
     width: 90%;
+    padding-bottom: 30px;
     border-bottom: #005669 solid 2px;
     /* Makes direct children (.seaconvoy-desc-content) flex items */
   }

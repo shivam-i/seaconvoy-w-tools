@@ -1,9 +1,9 @@
 .simulator-container {
   background-image: url(/public/images/tools/hydrofoil-simulator/hydrofoil=simulator-background.jpg);
   /* background-position: -200px -500px; */
-  background-size: 100vw 100vh;
+  background-size: 100vw 150vh;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 150vh;
 }
 
 .simulator {
@@ -64,12 +64,12 @@ input[type="number"] {
 
 .video-modal {
   z-index: 100;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black background */
+  /* background-color: rgba(0, 0, 0, 0.5); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,18 +80,19 @@ input[type="number"] {
 }
 
 .video-content video {
-  max-width: 90%;
-  max-height: 90%;
+  /* max-width: 90%;
+  max-height: 90%; */
 }
 
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: transparent;
+  right: 0px;
+  background-color: #00326c;
+  padding: 10px;
   border: none;
   color: white;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 500;
   cursor: pointer;
 }
 

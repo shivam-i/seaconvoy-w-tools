@@ -180,10 +180,13 @@
 // export default HydrofoilSimulator;
 
 import React, { useState } from "react";
+// import { database } from "../../context/AuthContext";
+import { UserAuth } from "../../context/AuthContext";
 import NavBar from "../../components/NavBar/NavBar";
 import "./HydrofoilSimulator.css";
 
 const HydrofoilSimulator = () => {
+  // const { user } = UserAuth();
   const [videoUrl, setVideoUrl] = useState(null);
   const [showVideoModal, setShowVideoModal] = useState(false);
   const [formData, setFormData] = useState({
@@ -238,6 +241,7 @@ const HydrofoilSimulator = () => {
     e.preventDefault();
 
     try {
+      alert("The exection take 1-2 mins. Please hang tight.");
       const response = await fetch(
         "http://127.0.0.1:5000/hydrofoil-simulator/",
         {
@@ -260,6 +264,21 @@ const HydrofoilSimulator = () => {
       console.error("Error:", error);
       // Handle errors here
     }
+
+    // const userKey = user.email.replace('.', ',');
+    // const userRef = database.ref('users/' + userKey);
+
+    // userRef.once('value', async (snapshot) => {
+    //   const inputs = snapshot.val();
+    //   const inputString = JSON.stringify(formData);
+
+    //   if (!inputs || !Object.values(inputs).includes(inputString)) {
+    //     userRef.push(inputString);
+    //     alert("Input added successfully");
+        
+
+    //   }
+    // })
   };
 
   const handleCloseModal = () => {
@@ -268,71 +287,75 @@ const HydrofoilSimulator = () => {
   };
 
   return (
-    <div className="simulator-container">
-      <NavBar />
-      <div className="simulator">
-        <p className="simulator-title">Flexible Hydrofoil Simulator</p>
-        <form className="simulator-form" onSubmit={handleSubmit}>
-          <p>Motor</p>
-          <p>Amplitude</p>
-          <p>Phase</p>
-          <p>Time Period</p>
+    <>
+      <div className="simulator-container">
+        <NavBar />
+        <div className="simulator">
+          <p className="simulator-title">Flexible Hydrofoil Simulator</p>
+          <form className="simulator-form" onSubmit={handleSubmit}>
+            <p>Motor</p>
+            <p>Amplitude</p>
+            <p>Phase</p>
+            <p>Time Period</p>
 
-          {[1, 2, 3, 4].map((motor) => (
-            <>
-              <p className={`motor${motor}`}>M{motor}</p>
-              <input
-                type="number"
-                id={`amp-m${motor}`}
-                min={-35}
-                max={+35}
-                step={0.01}
-                value={formData.amplitudes[motor - 1]}
-                onChange={handleAmplitudeChange}
-                required
-              />
-              <input
-                type="number"
-                id={`phase-m${motor}`}
-                min={-180}
-                max={180}
-                step={0.01}
-                value={formData.phases[motor - 1]}
-                onChange={handlePhaseChange}
-                required
-              />
-            </>
-          ))}
-          <input
-            type="number"
-            id="time-period"
-            min={2}
-            step={0.01}
-            value={formData.timePeriod}
-            onChange={handleTimePeriodChange}
-            required
-          />
+            {[1, 2, 3, 4].map((motor) => (
+              <>
+                <p className={`motor${motor}`}>M{motor}</p>
+                <input
+                  type="number"
+                  id={`amp-m${motor}`}
+                  min={-35}
+                  max={+35}
+                  step={0.01}
+                  value={formData.amplitudes[motor - 1]}
+                  onChange={handleAmplitudeChange}
+                  required
+                />
+                <input
+                  type="number"
+                  id={`phase-m${motor}`}
+                  min={-180}
+                  max={180}
+                  step={0.01}
+                  value={formData.phases[motor - 1]}
+                  onChange={handlePhaseChange}
+                  required
+                />
+              </>
+            ))}
+            <input
+              type="number"
+              id="time-period"
+              min={2}
+              step={0.01}
+              value={formData.timePeriod}
+              onChange={handleTimePeriodChange}
+              required
+            />
 
-          <button className="hydrolic-submit-btn" type="submit">
-            Submit
-          </button>
-        </form>
-        {showVideoModal && (
-          <div className="video-modal">
-            <div className="video-content">
-              <video controls>
-                <source src={videoUrl} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              <button className="close-btn" onClick={handleCloseModal}>
-                Close
-              </button>
+            <button className="hydrolic-submit-btn" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+        <div className="output-video-container">
+          {showVideoModal && (
+            <div className="video-modal">
+              <div className="video-content">
+                <video controls>
+                  <source src={videoUrl} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <button className="close-btn" onClick={handleCloseModal}>
+                  Close
+                </button>
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
-};
+}
 
 export default HydrofoilSimulator;

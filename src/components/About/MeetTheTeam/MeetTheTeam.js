@@ -12,6 +12,7 @@ function MeetTheTeam() {
                 <img src="./images/about-page/meet-the-team/soumya-card.png" alt="" />
                 <img src="./images/about-page/meet-the-team/vignesh-card.png" alt="" />
                 <img src="./images/about-page/meet-the-team/yashwanth-card.png" alt="" />
+                <img src="./images/about-page/meet-the-team/yashwanth-card.png" alt="" />
             </div>
         </div>
     );
